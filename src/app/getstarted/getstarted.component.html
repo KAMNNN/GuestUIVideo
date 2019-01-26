@@ -1,0 +1,28 @@
+<div id="wrapper">
+  <div id="label-container">
+    <label>Let's help you get ready</label>
+    <p>Which of the following best match you?</p>
+  </div>
+  <div id="selection-container">
+    <div class="row">
+      <div class="col">
+        <button class="selection-btn" (click)="selectAge(1)" [ngStyle]="{'border': selectedAge == 1 ? '3px solid #0099ff' : '3px solid lightgrey'}">22-40</button>
+      </div>
+      <div class="col">
+        <button class="selection-btn" (click)="selectAge(2)" [ngStyle]="{'border': selectedAge == 2 ? '3px solid #0099ff' : '3px solid lightgrey'}">40-60</button>
+      </div>
+      <div class="col">
+        <button class="selection-btn" (click)="selectAge(3)" [ngStyle]="{'border': selectedAge == 3 ? '3px solid #0099ff' : '3px solid lightgrey'}">60+</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="selection-btn" (click)="selectGender(1)" [ngStyle]="{'border': selectedGender == 1 ? '3px solid #0099ff' : '3px solid lightgrey'}">Male</button>
+      </div>
+      <div class="col">
+        <button class="selection-btn" (click)="selectGender(2)" [ngStyle]="{'border': selectedGender == 2 ? '3px solid #0099ff' : '3px solid lightgrey'}">Female</button>
+      </div>
+    </div>
+    <button id="continue-btn" [disabled]="selectedAge == 0 || selectedGender == 0" (click)="onSubmit()">Continue</button>
+  </div>
+</div>
