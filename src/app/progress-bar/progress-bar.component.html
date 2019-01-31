@@ -1,0 +1,15 @@
+<div id="wrapper">
+  <div id="progress-container">
+    <p class="get-ready-label" [ngStyle]="{'color': currentState == 'get-ready' ? 'black': '#cccccc'}">
+      Get Ready
+    </p>
+    <i class="fa fa-chevron-right"></i>
+    <p class="customize-label" [ngStyle]="{'color': currentState == 'customize' ? 'black': '#cccccc'}">
+      Customize
+    </p>
+    <i class="fa fa-chevron-right"></i>
+    <p class="checkout-label" [ngStyle]="{'color': currentState == 'checkout' ? 'black': '#cccccc'}">
+      Checkout
+    </p>
+  </div>
+</div>

@@ -1,26 +1,38 @@
 <div id="wrapper">
   <div id="label-container">
-    <label>Let's help you get ready</label>
+    <label id="title">Let's help you get ready</label>
     <p>Which of the following best match you?</p>
   </div>
   <div id="selection-container">
+    <label class="selection-label">Age</label>
     <div class="row">
       <div class="col">
-        <button class="selection-btn" (click)="selectAge(1)" [ngStyle]="{'border': selectedAge == 1 ? '3px solid #0099ff' : '3px solid lightgrey'}">22-40</button>
+        <div class="selection-gradient" (click)="selectAge(1)" [ngStyle]="{'background': selectedAge == 1 ? '-webkit-linear-gradient(left top, #1ea5e4, #2463cd)' : 'white'}">
+          <button class="selection-btn">22-40</button>
+        </div>
       </div>
       <div class="col">
-        <button class="selection-btn" (click)="selectAge(2)" [ngStyle]="{'border': selectedAge == 2 ? '3px solid #0099ff' : '3px solid lightgrey'}">40-60</button>
+        <div class="selection-gradient" (click)="selectAge(2)" [ngStyle]="{'background': selectedAge == 2 ? '-webkit-linear-gradient(left top, #1ea5e4, #2463cd)' : 'white'}">
+          <button class="selection-btn">40-60</button>
+        </div>
       </div>
       <div class="col">
-        <button class="selection-btn" (click)="selectAge(3)" [ngStyle]="{'border': selectedAge == 3 ? '3px solid #0099ff' : '3px solid lightgrey'}">60+</button>
+        <div class="selection-gradient" (click)="selectAge(3)" [ngStyle]="{'background': selectedAge == 3 ? '-webkit-linear-gradient(left top, #1ea5e4, #2463cd)' : 'white'}">
+          <button class="selection-btn">60+</button>
+        </div>
       </div>
     </div>
+    <label class="selection-label">Gender</label>
     <div class="row">
       <div class="col">
-        <button class="selection-btn" (click)="selectGender(1)" [ngStyle]="{'border': selectedGender == 1 ? '3px solid #0099ff' : '3px solid lightgrey'}">Male</button>
+        <div class="selection-gradient" (click)="selectGender(1)" [ngStyle]="{'background': selectedGender == 1 ? '-webkit-linear-gradient(left top, #1ea5e4, #2463cd)' : 'white'}">
+          <button class="selection-btn">Male</button>
+        </div>
       </div>
       <div class="col">
-        <button class="selection-btn" (click)="selectGender(2)" [ngStyle]="{'border': selectedGender == 2 ? '3px solid #0099ff' : '3px solid lightgrey'}">Female</button>
+        <div class="selection-gradient" (click)="selectGender(2)" [ngStyle]="{'background': selectedGender == 2 ? '-webkit-linear-gradient(left top, #1ea5e4, #2463cd)' : 'white'}">
+          <button class="selection-btn">Female</button>
+        </div>
       </div>
     </div>
     <button id="continue-btn" [disabled]="selectedAge == 0 || selectedGender == 0" (click)="onSubmit()">Continue</button>

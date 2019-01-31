@@ -1,0 +1,13 @@
+#wrapper {
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid black;
+    background: #2463cd;
+}
+
+p {
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
