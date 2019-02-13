@@ -3,16 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GetstartedComponent } from './getstarted/getstarted.component';
+import { SlideComponent } from './slide/slide.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
-import { SmallerHeaderComponent } from './smaller-header/smaller-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GetstartedComponent,
+    SlideComponent,
     ProgressBarComponent,
-    SmallerHeaderComponent
   ],
   imports: [
     BrowserModule,
