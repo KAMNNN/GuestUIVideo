@@ -1,5 +1,5 @@
 <div id="wrapper">
-  <app-progress-bar [currentState]="'get-ready'"></app-progress-bar>
+  <app-progress-bar [currentState]="currentSlide()"></app-progress-bar>
   <div id="content">
     <app-slide id="slide" [slide]="currentSlide()"></app-slide>
   </div>

@@ -6,11 +6,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./progress-bar.component.css']
 })
 export class ProgressBarComponent implements OnInit {
-  @Input() currentState: string;
+  @Input() currentState: number;
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }
