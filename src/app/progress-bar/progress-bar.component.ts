@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { WizardService } from '../wizard.service';
 
 @Component({
   selector: 'app-progress-bar',
@@ -6,10 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./progress-bar.component.css']
 })
 export class ProgressBarComponent implements OnInit {
-  @Input() currentState: number;
-
-  constructor() { }
+  constructor(private wizard: WizardService) { }
 
   ngOnInit() {
+  }
+
+  getCurrentSlide() {
+    return this.wizard.currentSlide;
   }
 }

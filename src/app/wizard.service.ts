@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 enum Slide {
   NONE = 0,
@@ -28,12 +29,15 @@ enum Business {
 export class WizardService {
   public currentSlide: Slide;
 
-  constructor() {
+  constructor(private router: Router) {
     this.currentSlide = 1;
   }
 
   nextSlide() {
     this.currentSlide++;
+    if (this.currentSlide == 3) {
+      this.router.navigateByUrl('get-started');
+    }
   }
 
   prevSlide() {

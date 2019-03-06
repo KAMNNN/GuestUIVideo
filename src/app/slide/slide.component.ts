@@ -14,7 +14,6 @@ enum Slide {
   styleUrls: ['./slide.component.css']
 })
 export class SlideComponent {
-  @Input() slide: Slide;
   selection = 0;
 
   occSelections = [
@@ -30,9 +29,13 @@ export class SlideComponent {
     {name: 'No Time', icon: '/assets/very_busy.png'}
   ];
 
+  getCurrentSlide() {
+    return this.wizard.currentSlide;
+  }
+
   constructor(private wizard: WizardService) {}
   getSelections() {
-    switch (this.slide) {
+    switch (this.getCurrentSlide()) {
       case Slide.OCC:
         return this.occSelections;
       case Slide.BUS:
