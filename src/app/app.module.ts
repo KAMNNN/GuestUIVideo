@@ -7,10 +7,12 @@ import { SlideComponent } from './slide/slide.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { GetStartedSlideComponent } from './get-started-slide/get-started-slide.component';
 import { Routes, RouterModule } from '@angular/router';
+import { SessionComponent } from './session/session.component';
 
 const appRoutes: Routes = [
-  { path: '', component: SlideComponent },
-  { path: 'get-started',      component: GetStartedSlideComponent },
+  { path: 'question', component: SlideComponent },
+  { path: 'question-pending', component: GetStartedSlideComponent },
+  { path: '', component: SessionComponent }
 ];
 
 @NgModule({
@@ -18,7 +20,8 @@ const appRoutes: Routes = [
     AppComponent,
     SlideComponent,
     ProgressBarComponent,
-    GetStartedSlideComponent
+    GetStartedSlideComponent,
+    SessionComponent
   ],
   imports: [
     RouterModule.forRoot(

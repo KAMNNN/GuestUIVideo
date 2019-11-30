@@ -30,7 +30,7 @@ export class WizardService {
   public currentSlide: Slide;
 
   constructor(private router: Router) {
-    this.currentSlide = 1;
+    this.currentSlide = 0;
   }
 
   nextSlide() {
@@ -39,10 +39,10 @@ export class WizardService {
       this.currentSlide = 1;
     }
     if (this.currentSlide % 2 == 0) {
-      this.router.navigateByUrl('get-started');
+      this.router.navigateByUrl('question-pending');
     }
     else {
-      this.router.navigateByUrl('');
+      this.router.navigateByUrl('question');
     }
   }
 
