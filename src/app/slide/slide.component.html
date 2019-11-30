@@ -1,19 +1,18 @@
 <div id="wrapper">
   <div id="inner-wrapper">
     <div id="label-container">
-      <label id="title">Let's help you get ready</label>
-      <p>What best describes you?</p>
+      <label id="title">Q{{(getCurrentSlide() + 1) / 2}}:&nbsp;</label>
+      <p>{{getQuestion()}}</p>
     </div>
     <div id="slide-container">
       <div class="selection-container">
         <div *ngFor="let s of getSelections(); let i = index" class="selection-btn-container">
           <div class="selection-gradient" (click)="select(i+1)" [ngStyle]="{'background': getBackground(i+1)}">
-            <button class="selection-btn"><img [src]="s.icon"/></button>
+            <div class="selection-btn">{{s.name}}</div>
           </div>
-          <label class="selection-label">{{s.name}}</label>
         </div>
       </div>
-      <button id="continue-btn" [disabled]="selection == 0" (click)="onSubmit()">Continue <i class="fa fa-chevron-right"></i></button>
+      <button id="continue-btn" [disabled]="selection == 0" (click)="onSubmit()">Submit <i class="fa fa-chevron-right"></i></button>
     </div>
   </div>
 </div>

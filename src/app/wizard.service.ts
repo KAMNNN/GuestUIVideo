@@ -35,8 +35,14 @@ export class WizardService {
 
   nextSlide() {
     this.currentSlide++;
-    if (this.currentSlide == 3) {
+    if (this.currentSlide == 7) {
+      this.currentSlide = 1;
+    }
+    if (this.currentSlide % 2 == 0) {
       this.router.navigateByUrl('get-started');
+    }
+    else {
+      this.router.navigateByUrl('');
     }
   }
 

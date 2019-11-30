@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WizardService } from '../wizard.service';
 
 @Component({
   selector: 'app-get-started-slide',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetStartedSlideComponent implements OnInit {
 
-  constructor() { }
+  constructor(private wizard: WizardService) { }
 
   ngOnInit() {
   }
-
+  
+  next() {
+    this.wizard.nextSlide();
+  }
 }

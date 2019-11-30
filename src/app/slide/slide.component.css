@@ -17,8 +17,9 @@
 }
 
 #label-container {
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -38,8 +39,8 @@
 }
 
 p {
-  color: #5286e0;
-  font-size: 14px;
+  color: black;
+  font-size: 16px;
   text-align: center;
   margin: 0;
 }
@@ -80,9 +81,9 @@ p {
 
 .selection-gradient {
   margin: 0 auto;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  border-radius: 25%;
+  width: 110px;
+  height: 90px;
   padding: 2px;
   box-shadow: 1px 1px 4px 0px grey;
   margin-bottom: 10px;
@@ -95,16 +96,15 @@ p {
 }
 
 .selection-btn {
-  border-radius: 50%;
-  width: 76px;
-  height: 76px;
+  border-radius: 25%;
+  width: 106px;
+  height: 86px;
   border: none;
   background: white;
-}
-
-.selection-btn img {
-  width: 76px;
-  height: 76px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .selection-label {

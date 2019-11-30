@@ -16,30 +16,55 @@ enum Slide {
 export class SlideComponent {
   selection = 0;
 
-  occSelections = [
-    {name: 'Student', icon: '/assets/student.png'},
-    {name: 'Early Career', icon: '/assets/early_career.png'},
-    {name: 'Manager', icon: '/assets/manager.png'},
-    {name: 'Parent', icon: '/assets/parent.png'}
+  question1 = "In what country is Normandy located?";
+  selections1 = [
+    {name: 'China'},
+    {name: 'United Kingdom'},
+    {name: 'France'},
+    {name: 'Germany'}
   ];
 
-  busSelections = [
-    {name: 'Somewhat', icon: '/assets/not_busy.png'},
-    {name: 'Very', icon: '/assets/busy.png'},
-    {name: 'No Time', icon: '/assets/very_busy.png'}
+  question2 = "When were the Normans in Normandy?";
+  selections2 = [
+    {name: '10th and 11th centuries'},
+    {name: '8th century'},
+    {name: '13th and 14th centuries'},
+    {name: '15th century'}
   ];
+
+  question3 = "From which countries did the Norse originate?";
+  selections3 = [
+    {name: 'France'},
+    {name: 'Germany'},
+    {name: 'Italy'},
+    {name: 'Denmark'}
+  ];
+
+  constructor(private wizard: WizardService) {}
 
   getCurrentSlide() {
     return this.wizard.currentSlide;
   }
 
-  constructor(private wizard: WizardService) {}
+  getQuestion() {
+    switch (this.getCurrentSlide()) {
+      case 1:
+        return this.question1;
+      case 3:
+        return this.question2;
+      case 5:
+        return this.question3;
+    }
+  }
+
   getSelections() {
     switch (this.getCurrentSlide()) {
-      case Slide.OCC:
-        return this.occSelections;
-      case Slide.BUS:
-        return this.busSelections;
+      case 1:
+        return this.selections1;
+      case 3:
+        return this.selections2;
+      case 5:
+        return this.selections3;
     }
   }
 
